@@ -29,9 +29,9 @@
           "bookedCabin": "PREMIUM_ECONOMY",
           "actualCabin": "ECONOMY",
           "bookingRef": "QF-29X4D1",
-          "price": 1150,
-          "bookedCabinPrice": 1850,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 1850,
+          "quantity": 1
         }
       ]
     }

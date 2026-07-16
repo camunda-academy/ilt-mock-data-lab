@@ -29,9 +29,9 @@
           "bookedCabin": "BUSINESS",
           "actualCabin": "ECONOMY",
           "bookingRef": "BA-62A19X",
-          "price": 890,
-          "bookedCabinPrice": 3100,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 3100,
+          "quantity": 1
         }
       ]
     }

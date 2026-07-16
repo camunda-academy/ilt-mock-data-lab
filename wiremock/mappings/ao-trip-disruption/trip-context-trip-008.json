@@ -29,8 +29,9 @@
           "delayMinutes": 180,
           "delayReason": "TRACK_FAULT",
           "bookingRef": "RE-40912",
-          "price": 145,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 145,
+          "quantity": 1
         },
         {
           "type": "HOTEL",
@@ -38,8 +39,9 @@
           "checkIn": "2026-06-18T16:00:00+02:00",
           "checkOut": "2026-06-21T11:00:00+02:00",
           "bookingRef": "BCN-55210",
-          "pricePerNight": 295,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 295,
+          "quantity": 3
         }
       ]
     }

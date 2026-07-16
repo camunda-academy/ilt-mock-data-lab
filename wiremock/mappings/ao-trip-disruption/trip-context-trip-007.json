@@ -27,8 +27,9 @@
           "arrival": "2026-08-15T09:05:00+04:00",
           "status": "LANDED_LATE",
           "bookingRef": "EK-55R2P8",
-          "price": 590,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 590,
+          "quantity": 1
         },
         {
           "type": "FLIGHT",
@@ -40,8 +41,9 @@
           "arrival": "2026-08-15T19:10:00+07:00",
           "status": "MISSED_CONNECTION",
           "bookingRef": "EK-55R2P8",
-          "price": 310,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 310,
+          "quantity": 1
         },
         {
           "type": "FLIGHT",
@@ -54,8 +56,9 @@
           "status": "SCHEDULED",
           "bookingRef": "TG-88221",
           "separateItinerary": true,
-          "price": 95,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 95,
+          "quantity": 1
         },
         {
           "type": "HOTEL",
@@ -63,8 +66,9 @@
           "checkIn": "2026-08-15T15:00:00+07:00",
           "checkOut": "2026-08-20T11:00:00+07:00",
           "bookingRef": "ABR-77034",
-          "pricePerNight": 260,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 260,
+          "quantity": 5
         }
       ]
     }

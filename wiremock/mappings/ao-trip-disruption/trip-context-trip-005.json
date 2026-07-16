@@ -28,8 +28,9 @@
           "status": "AT_RISK",
           "riskReason": "SEVERE_WEATHER_WARNING",
           "bookingRef": "AA-84K7Q2",
-          "price": 210,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 210,
+          "quantity": 1
         },
         {
           "type": "FLIGHT",
@@ -41,16 +42,18 @@
           "arrival": "2026-09-25T16:50:00-04:00",
           "status": "SCHEDULED",
           "bookingRef": "AA-84K7Q2",
-          "price": 145,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 145,
+          "quantity": 1
         },
         {
           "type": "TRANSFER",
           "provider": "Port Authority Shuttle",
           "pickupDate": "2026-09-27T10:00:00-04:00",
           "bookingRef": "PAS-7710",
-          "price": 45,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 45,
+          "quantity": 1
         },
         {
           "type": "CRUISE",
@@ -58,8 +61,9 @@
           "departurePort": "Boston",
           "departureDate": "2026-09-27T16:00:00-04:00",
           "bookingRef": "OHC-330198",
-          "price": 890,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 890,
+          "quantity": 1
         }
       ]
     }

@@ -27,8 +27,9 @@
           "arrival": "2026-08-04T07:15:00+08:00",
           "status": "MISSED_CONNECTION",
           "bookingRef": "KL-71QF9",
-          "price": 780,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 780,
+          "quantity": 1
         },
         {
           "type": "HOTEL",
@@ -36,8 +37,9 @@
           "checkIn": "2026-08-04T15:00:00+08:00",
           "checkOut": "2026-08-08T11:00:00+08:00",
           "bookingRef": "MBS-40218",
-          "pricePerNight": 210,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 210,
+          "quantity": 4
         }
       ]
     }

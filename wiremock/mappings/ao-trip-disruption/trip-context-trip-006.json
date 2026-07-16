@@ -29,8 +29,9 @@
           "cancellationReason": "MECHANICAL_FAULT",
           "bookingRef": "AC-11B4M7",
           "passengerCount": 4,
-          "price": 640,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 640,
+          "quantity": 4
         },
         {
           "type": "FLIGHT",
@@ -43,8 +44,9 @@
           "status": "SCHEDULED",
           "bookingRef": "AC-11B4M7",
           "passengerCount": 4,
-          "price": 210,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 210,
+          "quantity": 4
         },
         {
           "type": "HOTEL",
@@ -53,8 +55,9 @@
           "checkOut": "2026-10-11T10:00:00+02:00",
           "bookingRef": "VTR-90042",
           "refundable": false,
-          "pricePerNight": 180,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 180,
+          "quantity": 7
         }
       ]
     }

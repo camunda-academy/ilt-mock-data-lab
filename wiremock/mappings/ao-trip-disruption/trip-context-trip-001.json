@@ -28,8 +28,9 @@
           "status": "CANCELLED",
           "cancellationReason": "TECHNICAL_ISSUE",
           "bookingRef": "LH-9F3K2A",
-          "price": 2450,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 2450,
+          "quantity": 1
         },
         {
           "type": "CAR",
@@ -37,8 +38,9 @@
           "pickupLocation": "JFK Airport",
           "pickupDate": "2026-07-15T12:00:00-04:00",
           "bookingRef": "HZ-33021",
-          "price": 85,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 85,
+          "quantity": 1
         }
       ]
     }

@@ -29,8 +29,9 @@
           "delayMinutes": 245,
           "delayReason": "INFRASTRUCTURE_WORK",
           "bookingRef": "ES-58120C",
-          "price": 320,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 320,
+          "quantity": 1
         },
         {
           "type": "HOTEL",
@@ -38,8 +39,9 @@
           "checkIn": "2026-09-10T15:00:00+02:00",
           "checkOut": "2026-09-13T11:00:00+02:00",
           "bookingRef": "HLM-20847",
-          "pricePerNight": 340,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 340,
+          "quantity": 3
         }
       ]
     }

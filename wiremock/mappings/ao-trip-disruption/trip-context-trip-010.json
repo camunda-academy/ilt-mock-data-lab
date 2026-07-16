@@ -28,8 +28,9 @@
           "status": "AT_RISK",
           "riskReason": "SNOWFALL_FORECAST",
           "bookingRef": "UA-16M8T3",
-          "price": 280,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 280,
+          "quantity": 1
         },
         {
           "type": "TRANSFER",
@@ -39,8 +40,9 @@
           "destination": "Breckenridge Resort",
           "status": "AT_RISK",
           "bookingRef": "RMS-6002",
-          "price": 65,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 65,
+          "quantity": 1
         },
         {
           "type": "LIFT_PASS",
@@ -51,8 +53,9 @@
           "transferable": false,
           "groupBooking": true,
           "passengerCount": 5,
-          "price": 420,
-          "currency": "USD"
+          "currency": "USD",
+          "unitPrice": 420,
+          "quantity": 5
         }
       ]
     }
