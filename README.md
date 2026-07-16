@@ -34,3 +34,21 @@ managing the same GCP resources.
 Ongoing fixture/code deployments: Docker image built from this repo, pushed to
 Artifact Registry, deployed to Cloud Run via the GitHub Actions workflow in
 `.github/workflows/deploy.yml` (`gcloud run deploy`, no Terraform involved).
+
+### CI authentication
+
+The workflow authenticates to GCP via Workload Identity Federation (no
+long-lived service account key), using `google-github-actions/auth@v2`. This
+requires the following repo secrets to be set (Settings -> Secrets and
+variables -> Actions):
+
+- `GCP_WORKLOAD_IDENTITY_PROVIDER` -- the full WIF provider resource name,
+  e.g. `projects/<project-number>/locations/global/workloadIdentityPools/github/providers/github`
+- `GCP_SERVICE_ACCOUNT` -- `github-actions@<project-id>.iam.gserviceaccount.com`
+- `GCP_PROJECT_ID`
+- `GCP_REGION`
+- `ARTIFACT_REPOSITORY_ID`
+
+The WIF binding that allows this repo to assume the service account is
+provisioned by `terraform-dev/infrastructure` (`github_repos` variable must
+include `ilt-mock-data-lab`) -- see that repo for the one-time setup.
