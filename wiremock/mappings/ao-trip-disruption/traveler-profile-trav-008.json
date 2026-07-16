@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "RE-40912"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-008",
+      "fullName": "Ahmed Al-Farsi",
+      "email": "ahmed.alfarsi@example.com",
+      "phone": "+968-9123-4567",
+      "loyaltyTier": "PLATINUM",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "BUSINESS",
+        "dietary": "HALAL"
+      },
+      "notes": "Client dinner at 8pm same day; hotel check-in and dinner both at risk from the delay."
+    }
+  }
+}

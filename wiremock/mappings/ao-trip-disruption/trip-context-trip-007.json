@@ -1,0 +1,72 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "EK-55R2P8"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-007",
+      "travelerId": "TRAV-007",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "EK",
+          "flightNumber": "EK9",
+          "origin": "LHR",
+          "destination": "DXB",
+          "departure": "2026-08-14T22:15:00+01:00",
+          "arrival": "2026-08-15T09:05:00+04:00",
+          "status": "LANDED_LATE",
+          "bookingRef": "EK-55R2P8",
+          "price": 590,
+          "currency": "USD"
+        },
+        {
+          "type": "FLIGHT",
+          "carrier": "EK",
+          "flightNumber": "EK354",
+          "origin": "DXB",
+          "destination": "BKK",
+          "departure": "2026-08-15T09:25:00+04:00",
+          "arrival": "2026-08-15T19:10:00+07:00",
+          "status": "MISSED_CONNECTION",
+          "bookingRef": "EK-55R2P8",
+          "price": 310,
+          "currency": "USD"
+        },
+        {
+          "type": "FLIGHT",
+          "carrier": "TG",
+          "flightNumber": "TG205",
+          "origin": "BKK",
+          "destination": "HKT",
+          "departure": "2026-08-15T21:00:00+07:00",
+          "arrival": "2026-08-15T22:20:00+07:00",
+          "status": "SCHEDULED",
+          "bookingRef": "TG-88221",
+          "separateItinerary": true,
+          "price": 95,
+          "currency": "USD"
+        },
+        {
+          "type": "HOTEL",
+          "provider": "Andaman Beach Resort",
+          "checkIn": "2026-08-15T15:00:00+07:00",
+          "checkOut": "2026-08-20T11:00:00+07:00",
+          "bookingRef": "ABR-77034",
+          "pricePerNight": 260,
+          "currency": "USD"
+        }
+      ]
+    }
+  }
+}

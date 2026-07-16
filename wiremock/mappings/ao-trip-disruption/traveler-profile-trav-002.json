@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "KL-71QF9"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-002",
+      "fullName": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "phone": "+44-7700-900142",
+      "loyaltyTier": "SILVER",
+      "preferences": {
+        "seat": "WINDOW",
+        "cabin": "ECONOMY",
+        "dietary": "VEGETARIAN"
+      },
+      "notes": "Attending a conference starting Monday; hotel check-in same day as arrival."
+    }
+  }
+}

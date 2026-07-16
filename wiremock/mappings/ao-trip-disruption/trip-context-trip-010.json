@@ -1,0 +1,60 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "UA-16M8T3"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-010",
+      "travelerId": "TRAV-010",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "UA",
+          "flightNumber": "UA2290",
+          "origin": "BOS",
+          "destination": "DEN",
+          "departure": "2026-12-11T08:20:00-06:00",
+          "arrival": "2026-12-11T09:55:00-07:00",
+          "status": "AT_RISK",
+          "riskReason": "SNOWFALL_FORECAST",
+          "bookingRef": "UA-16M8T3",
+          "price": 280,
+          "currency": "USD"
+        },
+        {
+          "type": "TRANSFER",
+          "provider": "Rocky Mountain Shuttle",
+          "pickupLocation": "DEN Airport",
+          "pickupDate": "2026-12-11T11:00:00-07:00",
+          "destination": "Breckenridge Resort",
+          "status": "AT_RISK",
+          "bookingRef": "RMS-6002",
+          "price": 65,
+          "currency": "USD"
+        },
+        {
+          "type": "LIFT_PASS",
+          "provider": "Breckenridge Resort",
+          "validFrom": "2026-12-12",
+          "validTo": "2026-12-15",
+          "bookingRef": "BX-groupski-410",
+          "transferable": false,
+          "groupBooking": true,
+          "passengerCount": 5,
+          "price": 420,
+          "currency": "USD"
+        }
+      ]
+    }
+  }
+}

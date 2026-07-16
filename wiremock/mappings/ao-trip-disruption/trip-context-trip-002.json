@@ -1,0 +1,45 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "KL-71QF9"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-002",
+      "travelerId": "TRAV-002",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "KL",
+          "flightNumber": "KL836",
+          "origin": "AMS",
+          "destination": "SIN",
+          "departure": "2026-08-03T14:05:00+02:00",
+          "arrival": "2026-08-04T07:15:00+08:00",
+          "status": "MISSED_CONNECTION",
+          "bookingRef": "KL-71QF9",
+          "price": 780,
+          "currency": "USD"
+        },
+        {
+          "type": "HOTEL",
+          "provider": "Marina Bay Suites",
+          "checkIn": "2026-08-04T15:00:00+08:00",
+          "checkOut": "2026-08-08T11:00:00+08:00",
+          "bookingRef": "MBS-40218",
+          "pricePerNight": 210,
+          "currency": "USD"
+        }
+      ]
+    }
+  }
+}

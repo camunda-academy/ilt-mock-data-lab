@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "AA-84K7Q2"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-005",
+      "fullName": "Sofia Nakamura",
+      "email": "sofia.nakamura@example.com",
+      "phone": "+1-555-0198",
+      "loyaltyTier": "SILVER",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "ECONOMY",
+        "dietary": "NONE"
+      },
+      "notes": "Non-transferable cruise departure Thursday; itinerary has three connecting legs at risk."
+    }
+  }
+}

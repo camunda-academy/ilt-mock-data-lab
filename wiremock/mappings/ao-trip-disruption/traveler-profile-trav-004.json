@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "BA-62A19X"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-004",
+      "fullName": "Elena Rossi",
+      "email": "elena.rossi@example.com",
+      "phone": "+39-345-6789012",
+      "loyaltyTier": "GOLD",
+      "preferences": {
+        "seat": "WINDOW",
+        "cabin": "BUSINESS",
+        "dietary": "NONE"
+      },
+      "notes": "Board presentation on arrival; booked business specifically to arrive rested."
+    }
+  }
+}

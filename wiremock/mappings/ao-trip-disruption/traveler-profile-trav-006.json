@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "AC-11B4M7"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-006",
+      "fullName": "David Bennett",
+      "email": "david.bennett@example.com",
+      "phone": "+1-416-555-0177",
+      "loyaltyTier": "NONE",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "ECONOMY",
+        "dietary": "NONE"
+      },
+      "notes": "Primary contact for a family of four (2 adults, 2 children); villa booking is non-refundable."
+    }
+  }
+}

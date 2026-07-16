@@ -1,0 +1,39 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "BA-62A19X"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-004",
+      "travelerId": "TRAV-004",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "BA",
+          "flightNumber": "BA116",
+          "origin": "LHR",
+          "destination": "SIN",
+          "departure": "2026-07-20T21:25:00+01:00",
+          "arrival": "2026-07-21T17:35:00+08:00",
+          "status": "DOWNGRADED",
+          "bookedCabin": "BUSINESS",
+          "actualCabin": "ECONOMY",
+          "bookingRef": "BA-62A19X",
+          "price": 890,
+          "bookedCabinPrice": 3100,
+          "currency": "USD"
+        }
+      ]
+    }
+  }
+}

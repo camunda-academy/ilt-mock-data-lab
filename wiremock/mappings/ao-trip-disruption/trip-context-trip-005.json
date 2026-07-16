@@ -1,0 +1,67 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "AA-84K7Q2"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-005",
+      "travelerId": "TRAV-005",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "AA",
+          "flightNumber": "AA1023",
+          "origin": "MIA",
+          "destination": "JFK",
+          "departure": "2026-09-25T09:15:00-04:00",
+          "arrival": "2026-09-25T12:05:00-04:00",
+          "status": "AT_RISK",
+          "riskReason": "SEVERE_WEATHER_WARNING",
+          "bookingRef": "AA-84K7Q2",
+          "price": 210,
+          "currency": "USD"
+        },
+        {
+          "type": "FLIGHT",
+          "carrier": "AA",
+          "flightNumber": "AA221",
+          "origin": "JFK",
+          "destination": "BOS",
+          "departure": "2026-09-25T15:30:00-04:00",
+          "arrival": "2026-09-25T16:50:00-04:00",
+          "status": "SCHEDULED",
+          "bookingRef": "AA-84K7Q2",
+          "price": 145,
+          "currency": "USD"
+        },
+        {
+          "type": "TRANSFER",
+          "provider": "Port Authority Shuttle",
+          "pickupDate": "2026-09-27T10:00:00-04:00",
+          "bookingRef": "PAS-7710",
+          "price": 45,
+          "currency": "USD"
+        },
+        {
+          "type": "CRUISE",
+          "provider": "Ocean Horizon Cruises",
+          "departurePort": "Boston",
+          "departureDate": "2026-09-27T16:00:00-04:00",
+          "bookingRef": "OHC-330198",
+          "price": 890,
+          "currency": "USD"
+        }
+      ]
+    }
+  }
+}

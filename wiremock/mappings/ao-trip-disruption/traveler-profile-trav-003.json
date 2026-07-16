@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "ES-58120C"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-003",
+      "fullName": "Marcus Weber",
+      "email": "marcus.weber@example.com",
+      "phone": "+49-151-23456789",
+      "loyaltyTier": "PLATINUM",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "BUSINESS",
+        "dietary": "NONE"
+      },
+      "notes": "Has an 8am business breakfast the morning after arrival; hotel no-show risk."
+    }
+  }
+}

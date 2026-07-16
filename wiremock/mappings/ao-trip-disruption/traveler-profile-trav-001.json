@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "LH-9F3K2A"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-001",
+      "fullName": "John Carter",
+      "email": "john.carter@example.com",
+      "phone": "+1-555-0142",
+      "loyaltyTier": "GOLD",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "BUSINESS",
+        "dietary": "NONE"
+      },
+      "notes": "Has a client meeting in NYC the morning after arrival; time-sensitive."
+    }
+  }
+}

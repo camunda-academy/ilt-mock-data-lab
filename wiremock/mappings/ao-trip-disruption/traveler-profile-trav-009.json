@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "QF-29X4D1"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-009",
+      "fullName": "Isabella Torres",
+      "email": "isabella.torres@example.com",
+      "phone": "+61-4-1234-5678",
+      "loyaltyTier": "SILVER",
+      "preferences": {
+        "seat": "WINDOW",
+        "cabin": "PREMIUM_ECONOMY",
+        "dietary": "NONE"
+      },
+      "notes": "Important pitch the morning after this overnight flight; open to rebooking or a fare-difference refund."
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "LH-9F3K2A"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-001",
+      "travelerId": "TRAV-001",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "LH",
+          "flightNumber": "LH441",
+          "origin": "FRA",
+          "destination": "JFK",
+          "departure": "2026-07-15T08:10:00+02:00",
+          "arrival": "2026-07-15T11:05:00-04:00",
+          "status": "CANCELLED",
+          "cancellationReason": "TECHNICAL_ISSUE",
+          "bookingRef": "LH-9F3K2A",
+          "price": 2450,
+          "currency": "USD"
+        },
+        {
+          "type": "CAR",
+          "provider": "Hertz",
+          "pickupLocation": "JFK Airport",
+          "pickupDate": "2026-07-15T12:00:00-04:00",
+          "bookingRef": "HZ-33021",
+          "price": 85,
+          "currency": "USD"
+        }
+      ]
+    }
+  }
+}

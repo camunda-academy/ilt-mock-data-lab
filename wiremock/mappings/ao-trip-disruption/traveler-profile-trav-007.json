@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "EK-55R2P8"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-007",
+      "fullName": "Grace O'Connell",
+      "email": "grace.oconnell@example.com",
+      "phone": "+353-87-1234567",
+      "loyaltyTier": "GOLD",
+      "preferences": {
+        "seat": "WINDOW",
+        "cabin": "ECONOMY",
+        "dietary": "GLUTEN_FREE"
+      },
+      "notes": "Domestic Phuket leg booked on a separate itinerary from the international flights; resort check-in same day."
+    }
+  }
+}

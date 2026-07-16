@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "UA-16M8T3"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-010",
+      "fullName": "Liam Fitzgerald",
+      "email": "liam.fitzgerald@example.com",
+      "phone": "+1-720-555-0133",
+      "loyaltyTier": "GOLD",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "ECONOMY",
+        "dietary": "NONE"
+      },
+      "notes": "Part of a group ski trip; lift passes are non-transferable and tied to the trip start date."
+    }
+  }
+}
