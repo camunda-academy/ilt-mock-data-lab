@@ -1,0 +1,48 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "W6-93PX4H"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "tripId": "TRIP-012",
+      "travelerId": "TRAV-012",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "W6",
+          "flightNumber": "W6201",
+          "origin": "LTN",
+          "destination": "BUD",
+          "departure": "2026-11-03T07:45:00+00:00",
+          "arrival": "2026-11-03T11:10:00+01:00",
+          "status": "CANCELLED",
+          "cancellationReason": "TECHNICAL_ISSUE",
+          "bookingRef": "W6-93PX4H",
+          "currency": "USD",
+          "unitPrice": 165,
+          "quantity": 1
+        },
+        {
+          "type": "HOTEL",
+          "provider": "Budapest Dental Suites",
+          "checkIn": "2026-11-03T14:00:00+01:00",
+          "checkOut": "2026-11-07T11:00:00+01:00",
+          "bookingRef": "BDS-42207",
+          "currency": "USD",
+          "unitPrice": 95,
+          "quantity": 4
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "W6-93PX4H"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-012",
+      "fullName": "Michael Reyes",
+      "email": "michael.reyes@example.com",
+      "phone": "+44-7700-900321",
+      "loyaltyTier": "NONE",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "ECONOMY",
+        "dietary": "NONE"
+      },
+      "notes": "Traveling for a pre-booked dental procedure in Budapest; the clinic requires arrival at least 24 hours before the 2026-11-04 09:00 appointment for pre-op consultation, and rescheduling the clinic slot has a significant cancellation fee."
+    }
+  }
+}

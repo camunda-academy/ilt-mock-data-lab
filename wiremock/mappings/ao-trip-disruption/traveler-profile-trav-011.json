@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "TK-72KX9L"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-011",
+      "fullName": "Sophie Laurent",
+      "email": "sophie.laurent@example.com",
+      "phone": "+33-6-4471-0928",
+      "loyaltyTier": "SILVER",
+      "preferences": {
+        "seat": "WINDOW",
+        "cabin": "ECONOMY",
+        "dietary": "VEGETARIAN"
+      },
+      "notes": "Traveling on a single-entry India e-Visa valid for arrival on 2026-10-08 only; a rebooking that lands the next day would arrive outside the visa's approved entry date."
+    }
+  }
+}
