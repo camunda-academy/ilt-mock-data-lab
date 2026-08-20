@@ -1,0 +1,49 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "SQ-46P9J2"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "tripId": "TRIP-015",
+      "travelerId": "TRAV-015",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "SQ",
+          "flightNumber": "SQ326",
+          "origin": "SIN",
+          "destination": "LHR",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T23:35:00+08:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T06:05:00+01:00",
+          "status": "CANCELLED",
+          "cancellationReason": "TECHNICAL_ISSUE",
+          "bookingRef": "SQ-46P9J2",
+          "currency": "USD",
+          "unitPrice": 890,
+          "quantity": 1
+        },
+        {
+          "type": "HOTEL",
+          "provider": "Canary Wharf Suites",
+          "checkIn": "{{now offset='3 days' format='yyyy-MM-dd'}}T15:00:00+01:00",
+          "checkOut": "{{now offset='7 days' format='yyyy-MM-dd'}}T11:00:00+01:00",
+          "bookingRef": "CWS-88410",
+          "currency": "USD",
+          "unitPrice": 210,
+          "quantity": 4
+        }
+      ]
+    }
+  }
+}

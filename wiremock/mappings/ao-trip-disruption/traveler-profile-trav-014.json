@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "LX-38K1W6"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-014",
+      "fullName": "Jonas Hedberg",
+      "email": "jonas.hedberg@example.com",
+      "phone": "+41-79-334-8820",
+      "loyaltyTier": "SILVER",
+      "preferences": {
+        "seat": "WINDOW",
+        "cabin": "ECONOMY",
+        "dietary": "VEGAN"
+      },
+      "notes": "Traveler has an explicit company sustainable-travel policy: prefers train-over-flight rebooking options and carbon offset add-ons wherever feasible; needs sustainable/low-impact routing guidance before any replacement flight is booked."
+    }
+  }
+}

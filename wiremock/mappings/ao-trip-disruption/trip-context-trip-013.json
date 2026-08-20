@@ -1,0 +1,49 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "AS-27D8N4"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "tripId": "TRIP-013",
+      "travelerId": "TRAV-013",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "AS",
+          "flightNumber": "AS1187",
+          "origin": "LAX",
+          "destination": "SFO",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T16:20:00-08:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T17:35:00-08:00",
+          "status": "AT_RISK",
+          "cancellationReason": "WILDFIRE_EVACUATION_ZONE",
+          "bookingRef": "AS-27D8N4",
+          "currency": "USD",
+          "unitPrice": 210,
+          "quantity": 1
+        },
+        {
+          "type": "HOTEL",
+          "provider": "Presidio Heights Lodge",
+          "checkIn": "{{now offset='2 days' format='yyyy-MM-dd'}}T15:00:00-08:00",
+          "checkOut": "{{now offset='4 days' format='yyyy-MM-dd'}}T11:00:00-08:00",
+          "bookingRef": "PHL-71029",
+          "currency": "USD",
+          "unitPrice": 265,
+          "quantity": 2
+        }
+      ]
+    }
+  }
+}

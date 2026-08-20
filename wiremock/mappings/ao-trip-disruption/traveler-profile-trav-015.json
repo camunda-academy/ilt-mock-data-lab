@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "SQ-46P9J2"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-015",
+      "fullName": "Daniel Okoye",
+      "email": "daniel.okoye@example.com",
+      "phone": "+65-9123-4477",
+      "loyaltyTier": "GOLD",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "BUSINESS",
+        "dietary": "NONE"
+      },
+      "notes": "Traveling on a UK work permit with a mandatory registration appointment 48 hours after original arrival; a rebooking that delays arrival by more than a day risks missing the registration window and invalidating the permit conditions."
+    }
+  }
+}

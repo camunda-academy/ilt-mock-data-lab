@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/traveler-profile",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "AS-27D8N4"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "travelerId": "TRAV-013",
+      "fullName": "Natalie Ferreira",
+      "email": "natalie.ferreira@example.com",
+      "phone": "+1-415-552-0198",
+      "loyaltyTier": "GOLD",
+      "preferences": {
+        "seat": "AISLE",
+        "cabin": "ECONOMY",
+        "dietary": "NONE"
+      },
+      "notes": "Destination area (SFO/Bay Area) is adjacent to an active wildfire evacuation zone; local authorities have issued advisories affecting ground transport and hotel access — needs emergency/crisis travel guidance before rebooking."
+    }
+  }
+}

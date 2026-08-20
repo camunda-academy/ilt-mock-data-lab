@@ -1,0 +1,49 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/trip-context",
+    "queryParameters": {
+      "bookingRef": {
+        "equalTo": "LX-38K1W6"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "tripId": "TRIP-014",
+      "travelerId": "TRAV-014",
+      "segments": [
+        {
+          "type": "FLIGHT",
+          "carrier": "LX",
+          "flightNumber": "LX1842",
+          "origin": "ZRH",
+          "destination": "CPH",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T11:05:00+01:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T13:15:00+01:00",
+          "status": "CANCELLED",
+          "cancellationReason": "TECHNICAL_ISSUE",
+          "bookingRef": "LX-38K1W6",
+          "currency": "USD",
+          "unitPrice": 245,
+          "quantity": 1
+        },
+        {
+          "type": "HOTEL",
+          "provider": "Nordic Green Hotel",
+          "checkIn": "{{now offset='2 days' format='yyyy-MM-dd'}}T15:00:00+01:00",
+          "checkOut": "{{now offset='5 days' format='yyyy-MM-dd'}}T11:00:00+01:00",
+          "bookingRef": "NGH-50317",
+          "currency": "USD",
+          "unitPrice": 180,
+          "quantity": 3
+        }
+      ]
+    }
+  }
+}
