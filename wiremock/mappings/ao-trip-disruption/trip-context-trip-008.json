@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "tripId": "TRIP-008",
       "travelerId": "TRAV-008",
@@ -23,8 +24,8 @@
           "trainNumber": "03142",
           "origin": "MAD",
           "destination": "BCN",
-          "departure": "2026-06-18T13:00:00+02:00",
-          "arrival": "2026-06-18T15:35:00+02:00",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T13:00:00+02:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T15:35:00+02:00",
           "status": "DELAYED",
           "delayMinutes": 180,
           "delayReason": "TRACK_FAULT",
@@ -36,8 +37,8 @@
         {
           "type": "HOTEL",
           "provider": "Hotel Born Barcelona",
-          "checkIn": "2026-06-18T16:00:00+02:00",
-          "checkOut": "2026-06-21T11:00:00+02:00",
+          "checkIn": "{{now offset='2 days' format='yyyy-MM-dd'}}T16:00:00+02:00",
+          "checkOut": "{{now offset='5 days' format='yyyy-MM-dd'}}T11:00:00+02:00",
           "bookingRef": "BCN-55210",
           "currency": "USD",
           "unitPrice": 295,

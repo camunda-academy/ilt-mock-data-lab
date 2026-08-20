@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "tripId": "TRIP-011",
       "travelerId": "TRAV-011",
@@ -23,8 +24,8 @@
           "flightNumber": "TK1834",
           "origin": "IST",
           "destination": "DEL",
-          "departure": "2026-10-08T02:15:00+03:00",
-          "arrival": "2026-10-08T12:40:00+05:30",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T02:15:00+03:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T12:40:00+05:30",
           "status": "CANCELLED",
           "cancellationReason": "TECHNICAL_ISSUE",
           "bookingRef": "TK-72KX9L",
@@ -35,8 +36,8 @@
         {
           "type": "HOTEL",
           "provider": "Delhi Grand Palace",
-          "checkIn": "2026-10-08T15:00:00+05:30",
-          "checkOut": "2026-10-11T11:00:00+05:30",
+          "checkIn": "{{now offset='2 days' format='yyyy-MM-dd'}}T15:00:00+05:30",
+          "checkOut": "{{now offset='5 days' format='yyyy-MM-dd'}}T11:00:00+05:30",
           "bookingRef": "DGP-61084",
           "currency": "USD",
           "unitPrice": 140,

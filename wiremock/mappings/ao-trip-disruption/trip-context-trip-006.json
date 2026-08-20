@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "tripId": "TRIP-006",
       "travelerId": "TRAV-006",
@@ -23,8 +24,8 @@
           "flightNumber": "AC858",
           "origin": "YYZ",
           "destination": "LHR",
-          "departure": "2026-10-02T19:40:00-04:00",
-          "arrival": "2026-10-03T07:55:00+01:00",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T19:40:00-04:00",
+          "arrival": "{{now offset='3 days' format='yyyy-MM-dd'}}T07:55:00+01:00",
           "status": "CANCELLED",
           "cancellationReason": "MECHANICAL_FAULT",
           "bookingRef": "AC-11B4M7",
@@ -39,8 +40,8 @@
           "flightNumber": "AC291",
           "origin": "LHR",
           "destination": "FCO",
-          "departure": "2026-10-03T11:20:00+01:00",
-          "arrival": "2026-10-03T15:00:00+02:00",
+          "departure": "{{now offset='3 days' format='yyyy-MM-dd'}}T11:20:00+01:00",
+          "arrival": "{{now offset='3 days' format='yyyy-MM-dd'}}T15:00:00+02:00",
           "status": "SCHEDULED",
           "bookingRef": "AC-11B4M7",
           "passengerCount": 4,
@@ -51,8 +52,8 @@
         {
           "type": "HOTEL",
           "provider": "Villa Toscana Rentals",
-          "checkIn": "2026-10-04T16:00:00+02:00",
-          "checkOut": "2026-10-11T10:00:00+02:00",
+          "checkIn": "{{now offset='4 days' format='yyyy-MM-dd'}}T16:00:00+02:00",
+          "checkOut": "{{now offset='11 days' format='yyyy-MM-dd'}}T10:00:00+02:00",
           "bookingRef": "VTR-90042",
           "refundable": false,
           "currency": "USD",

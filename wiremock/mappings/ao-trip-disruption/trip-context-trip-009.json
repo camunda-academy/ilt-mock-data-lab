@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "tripId": "TRIP-009",
       "travelerId": "TRAV-009",
@@ -23,8 +24,8 @@
           "flightNumber": "QF8",
           "origin": "MEL",
           "destination": "LAX",
-          "departure": "2026-11-05T10:35:00+11:00",
-          "arrival": "2026-11-05T07:05:00-08:00",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T10:35:00+11:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T07:05:00-08:00",
           "status": "DOWNGRADED",
           "bookedCabin": "PREMIUM_ECONOMY",
           "actualCabin": "ECONOMY",

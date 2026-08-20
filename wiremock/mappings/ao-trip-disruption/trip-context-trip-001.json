@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "tripId": "TRIP-001",
       "travelerId": "TRAV-001",
@@ -23,8 +24,8 @@
           "flightNumber": "LH441",
           "origin": "FRA",
           "destination": "JFK",
-          "departure": "2026-07-15T08:10:00+02:00",
-          "arrival": "2026-07-15T11:05:00-04:00",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T08:10:00+02:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T11:05:00-04:00",
           "status": "CANCELLED",
           "cancellationReason": "TECHNICAL_ISSUE",
           "bookingRef": "LH-9F3K2A",
@@ -36,7 +37,7 @@
           "type": "CAR",
           "provider": "Hertz",
           "pickupLocation": "JFK Airport",
-          "pickupDate": "2026-07-15T12:00:00-04:00",
+          "pickupDate": "{{now offset='2 days' format='yyyy-MM-dd'}}T12:00:00-04:00",
           "bookingRef": "HZ-33021",
           "currency": "USD",
           "unitPrice": 85,

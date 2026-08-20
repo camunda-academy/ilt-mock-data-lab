@@ -5,3 +5,6 @@ FROM wiremock/wiremock:3.13.2
 COPY ./wiremock/mappings /home/wiremock/mappings
 
 EXPOSE 8080
+
+# Enable Handlebars response templating so {{now offset='N days'}} resolves at request time.
+CMD ["--global-response-templating"]

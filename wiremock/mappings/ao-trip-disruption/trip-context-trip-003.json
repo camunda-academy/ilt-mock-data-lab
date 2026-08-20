@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "tripId": "TRIP-003",
       "travelerId": "TRAV-003",
@@ -23,8 +24,8 @@
           "trainNumber": "9035",
           "origin": "LON",
           "destination": "PAR",
-          "departure": "2026-09-10T07:31:00+01:00",
-          "arrival": "2026-09-10T14:47:00+02:00",
+          "departure": "{{now offset='2 days' format='yyyy-MM-dd'}}T07:31:00+01:00",
+          "arrival": "{{now offset='2 days' format='yyyy-MM-dd'}}T14:47:00+02:00",
           "status": "DELAYED",
           "delayMinutes": 245,
           "delayReason": "INFRASTRUCTURE_WORK",
@@ -36,8 +37,8 @@
         {
           "type": "HOTEL",
           "provider": "Hotel Le Marais",
-          "checkIn": "2026-09-10T15:00:00+02:00",
-          "checkOut": "2026-09-13T11:00:00+02:00",
+          "checkIn": "{{now offset='2 days' format='yyyy-MM-dd'}}T15:00:00+02:00",
+          "checkOut": "{{now offset='5 days' format='yyyy-MM-dd'}}T11:00:00+02:00",
           "bookingRef": "HLM-20847",
           "currency": "USD",
           "unitPrice": 340,
