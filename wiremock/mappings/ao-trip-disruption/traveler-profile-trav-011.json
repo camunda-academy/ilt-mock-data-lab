@@ -13,6 +13,7 @@
     "headers": {
       "Content-Type": "application/json"
     },
+    "transformers": ["response-template"],
     "jsonBody": {
       "travelerId": "TRAV-011",
       "fullName": "Sophie Laurent",
@@ -24,7 +25,7 @@
         "cabin": "ECONOMY",
         "dietary": "VEGETARIAN"
       },
-      "notes": "Traveling on a single-entry India e-Visa valid for arrival on 2026-10-08 only; a rebooking that lands the next day would arrive outside the visa's approved entry date."
+      "notes": "Traveling on a single-entry India e-Visa valid for arrival on {{now offset='2 days' format='yyyy-MM-dd'}} only; a rebooking that lands the next day would arrive outside the visa's approved entry date."
     }
   }
 }
