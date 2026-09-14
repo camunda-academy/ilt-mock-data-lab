@@ -10,6 +10,7 @@
  */
 
 const { spawn } = require('child_process');
+const net = require('net');
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const { checkConsistency } = require('./consistencyService');
@@ -18,6 +19,8 @@ const PORT = process.env.PORT || 8080;
 const WIREMOCK_PORT = 8081;
 const WIREMOCK_JAR = '/var/wiremock/lib/wiremock-standalone.jar';
 const WIREMOCK_ROOT = '/home/wiremock';
+const WIREMOCK_READY_TIMEOUT_MS = 60_000;
+const WIREMOCK_READY_POLL_MS = 200;
 
 function startWiremock() {
   const wiremock = spawn(
@@ -42,11 +45,44 @@ function startWiremock() {
   return wiremock;
 }
 
+// Cloud Run starts routing traffic as soon as the container's port is open,
+// but WireMock (a JVM process) takes a few seconds to boot. On scale-to-zero
+// this races on every cold start: a request for a proxied path (anything but
+// /check-consistency) can arrive before WireMock is listening on 8081, which
+// http-proxy-middleware turns into an immediate connection-refused error.
+// So don't open the public port until WireMock is confirmed to accept
+// connections.
+function waitForWiremockReady(timeoutMs = WIREMOCK_READY_TIMEOUT_MS) {
+  const deadline = Date.now() + timeoutMs;
+
+  return new Promise((resolve, reject) => {
+    const attempt = () => {
+      const socket = net.connect({ port: WIREMOCK_PORT, host: '127.0.0.1' });
+
+      socket.once('connect', () => {
+        socket.destroy();
+        resolve();
+      });
+
+      socket.once('error', () => {
+        socket.destroy();
+        if (Date.now() >= deadline) {
+          reject(new Error(`WireMock did not become ready within ${timeoutMs}ms`));
+          return;
+        }
+        setTimeout(attempt, WIREMOCK_READY_POLL_MS);
+      });
+    };
+
+    attempt();
+  });
+}
+
 function isValidSegments(segments) {
   return Array.isArray(segments) && segments.every((s) => s && typeof s === 'object');
 }
 
-function main() {
+async function main() {
   startWiremock();
 
   const app = express();
@@ -78,9 +114,16 @@ function main() {
     })
   );
 
+  console.log('Waiting for WireMock to become ready...');
+  await waitForWiremockReady();
+  console.log('WireMock is ready.');
+
   app.listen(PORT, () => {
     console.log(`ilt-mock-data-lab listening on port ${PORT} (WireMock internal on ${WIREMOCK_PORT})`);
   });
 }
 
-main();
+main().catch((err) => {
+  console.error('Failed to start server:', err);
+  process.exit(1);
+});
