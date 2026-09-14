@@ -1,0 +1,14 @@
+{
+  "name": "ilt-mock-data-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Front door for the ilt-mock-data-lab Cloud Run service: real /check-consistency logic plus a reverse proxy to an internal WireMock instance serving static per-training fixtures.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^2.0.6"
+  }
+}
