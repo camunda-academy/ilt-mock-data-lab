@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-005",
-      "fullName": "Sofia Nakamura",
-      "email": "sofia.nakamura@example.com",
       "phone": "+1-555-0198",
       "loyaltyTier": "SILVER",
       "preferences": {
@@ -24,7 +22,7 @@
         "cabin": "ECONOMY",
         "dietary": "NONE"
       },
-      "notes": "Non-transferable cruise departure Thursday; itinerary has three connecting legs at risk."
+      "notes": "Non-transferable cruise departure after arrival; itinerary has multiple connecting legs at risk."
     }
   }
 }

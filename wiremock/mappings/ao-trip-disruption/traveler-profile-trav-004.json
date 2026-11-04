@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-004",
-      "fullName": "Elena Rossi",
-      "email": "elena.rossi@example.com",
       "phone": "+39-345-6789012",
       "loyaltyTier": "GOLD",
       "preferences": {
@@ -24,7 +22,7 @@
         "cabin": "BUSINESS",
         "dietary": "NONE"
       },
-      "notes": "Board presentation on arrival; booked business specifically to arrive rested."
+      "notes": "Has a client meeting the morning after arrival; time-sensitive."
     }
   }
 }

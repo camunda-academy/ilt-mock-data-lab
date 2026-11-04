@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-010",
-      "fullName": "Liam Fitzgerald",
-      "email": "liam.fitzgerald@example.com",
       "phone": "+1-720-555-0133",
       "loyaltyTier": "GOLD",
       "preferences": {

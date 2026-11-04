@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-007",
-      "fullName": "Grace O'Connell",
-      "email": "grace.oconnell@example.com",
       "phone": "+353-87-1234567",
       "loyaltyTier": "GOLD",
       "preferences": {
@@ -24,7 +22,7 @@
         "cabin": "ECONOMY",
         "dietary": "GLUTEN_FREE"
       },
-      "notes": "Domestic Phuket leg booked on a separate itinerary from the international flights; resort check-in same day."
+      "notes": "Primary contact for a family group; villa booking is non-refundable."
     }
   }
 }

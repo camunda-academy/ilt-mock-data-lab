@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-013",
-      "fullName": "Natalie Ferreira",
-      "email": "natalie.ferreira@example.com",
       "phone": "+1-415-552-0198",
       "loyaltyTier": "GOLD",
       "preferences": {
@@ -24,7 +22,7 @@
         "cabin": "ECONOMY",
         "dietary": "NONE"
       },
-      "notes": "Destination area (SFO/Bay Area) is adjacent to an active wildfire evacuation zone; local authorities have issued advisories affecting ground transport and hotel access — needs emergency/crisis travel guidance before rebooking."
+      "notes": "Traveler's company encourages low-carbon travel options where feasible."
     }
   }
 }

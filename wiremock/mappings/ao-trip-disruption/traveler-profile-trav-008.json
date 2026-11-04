@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-008",
-      "fullName": "Ahmed Al-Farsi",
-      "email": "ahmed.alfarsi@example.com",
       "phone": "+968-9123-4567",
       "loyaltyTier": "PLATINUM",
       "preferences": {
@@ -24,7 +22,7 @@
         "cabin": "BUSINESS",
         "dietary": "HALAL"
       },
-      "notes": "Client dinner at 8pm same day; hotel check-in and dinner both at risk from the delay."
+      "notes": "Final domestic leg booked on a separate itinerary from the international flights; resort check-in same day."
     }
   }
 }

@@ -16,8 +16,6 @@
     "transformers": ["response-template"],
     "jsonBody": {
       "travelerId": "TRAV-011",
-      "fullName": "Sophie Laurent",
-      "email": "sophie.laurent@example.com",
       "phone": "+33-6-4471-0928",
       "loyaltyTier": "SILVER",
       "preferences": {
@@ -25,7 +23,7 @@
         "cabin": "ECONOMY",
         "dietary": "VEGETARIAN"
       },
-      "notes": "Traveling on a single-entry India e-Visa valid for arrival on {{now offset='2 days' format='yyyy-MM-dd'}} only; a rebooking that lands the next day would arrive outside the visa's approved entry date."
+      "notes": "Traveling on a single-entry e-Visa valid for a specific arrival date only; a rebooking that lands on a different day would arrive outside the approved entry date."
     }
   }
 }

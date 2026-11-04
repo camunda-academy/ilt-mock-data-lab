@@ -15,8 +15,6 @@
     },
     "jsonBody": {
       "travelerId": "TRAV-006",
-      "fullName": "David Bennett",
-      "email": "david.bennett@example.com",
       "phone": "+1-416-555-0177",
       "loyaltyTier": "NONE",
       "preferences": {
@@ -24,7 +22,7 @@
         "cabin": "ECONOMY",
         "dietary": "NONE"
       },
-      "notes": "Primary contact for a family of four (2 adults, 2 children); villa booking is non-refundable."
+      "notes": "Client dinner the same evening; hotel check-in and dinner both at risk from the delay."
     }
   }
 }
