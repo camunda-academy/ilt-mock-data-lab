@@ -62,4 +62,5 @@ jobs:
             --image ${IMAGE_NAME} \
             --platform managed \
             --region europe-west1 \
-            --project ${{ secrets.GCP_PROJECT_ID }}
+            --project ${{ secrets.GCP_PROJECT_ID }} \
+            --update-env-vars JDK_JAVA_OPTIONS=-XX:-UseBASE64Intrinsics

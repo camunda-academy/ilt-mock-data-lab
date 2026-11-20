@@ -4,11 +4,12 @@ FROM wiremock/wiremock:3.13.2 AS wiremock
 
 FROM node:20-slim
 
-# WireMock is a JVM app; install a headless JRE alongside Node so both the
-# proxy/logic app and WireMock itself run in the same container.
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends default-jre-headless \
-    && rm -rf /var/lib/apt/lists/*
+# WireMock is a JVM app. Copy a pinned, patched JRE (Corretto 21.0.13.1,
+# fixes Java4Shell CVE-2026-114938) instead of Debian's default-jre-headless,
+# whose patch timing we don't control. Bump tag + digest together.
+COPY --from=amazoncorretto:21.0.13-al2023-headless@sha256:5085e890043da2b63af83b0fa7259b90e6687f867db2deed628f1b68c798cadb /usr/lib/jvm/java-21-amazon-corretto /opt/java
+ENV JAVA_HOME=/opt/java
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 COPY --from=wiremock /var/wiremock/lib/wiremock-standalone.jar /var/wiremock/lib/wiremock-standalone.jar
 
